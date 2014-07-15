@@ -154,6 +154,10 @@ greet({ person: 'Alex', greeting: 'Hello' }); // 'Hello, Alex'
 
 This is yet clunkier, but it's also used frequently in real JavaScript programs and your calls become a lot more readable when your functions have more than one optional argument (or even more than one argument, period).
 
+## Lab 1
+
+Working in pairs, complete the first three parts of the [Alice Analysis](https://github.com/ga-wdi-boston/wdi_1_ruby_hw_word_methods) homework we did in Ruby. For your convenience, the sample text and specifications are included in `analysis.js`.
+
 ## Functions as Arguments
 
 You may remember this method of iterating over an array:
