@@ -282,3 +282,7 @@ customGreeter('Dan'); // 'Ahoy, Dan'
 Whoah. Despite your intuition that the local variable `greeting` should disappear once the call to `generateGreeter` is over, the inner function defined inside it "remembered" where and when it was defined, and still has access to any variables that were present in the outer scope at that moment. This is called a "closure" &ndash; we say that we are "closing over" the `greeting` variable.
 
 Closures are not peculiar to JavaScript &ndash; they are an extremely important and universal concept in computer science. We have not covered the use of closures in Ruby because A) the design of the language is such that they are rarely needed, and B) it would have been too big a concept for the first few weeks. But they do exist in Ruby, mostly when using lambdas, and also in many other languages.
+
+## Lab 2
+
+See the separate [Rated J for JavaScript](https://github.com/ga-wdi-boston/wdi_6_js_lab_functions) lab repository.
