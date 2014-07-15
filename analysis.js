@@ -2,11 +2,38 @@ var sampleText = 'Alice was beginning to get very tired of sitting by her sister
 
 // 1. Write a function that splits a string into an array of normalized words,
 //    meaning they should be lowercased with punctuation stripped out.
+function normalizedWords(text) {
+  return text.toLowerCase().replace(/[^a-z ]/g, '').split(' ');
+}
 
 // 2. Write a function that takes a string and returns an array of all *unique*
 //    words in it, ignoring punctuation and capitalization differences.
+function uniqueWords(text) {
+  var words = normalizedWords(text);
+  var seen = {};
+  var result = [];
+
+  words.forEach(function(word) {
+    if(!seen[word]) {
+      seen[word] = true;
+      result.push(word);
+    }
+  });
+
+  return result;
+}
 
 // 3. Write a function that counts how many words are in a string, providing
 //    the *option* to count unique words instead of total words.
+function wordCount(text, options) {
+  options = options || {};
+  var unique = options.unique || false;
+
+  if(unique) {
+    return uniqueWords(text).length;
+  } else {
+    return normalizedWords(text).length;
+  }
+}
 
 // Don't forget to reuse functions wherever possible!
